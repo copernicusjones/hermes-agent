@@ -19,6 +19,7 @@ logs/
 data/
 .pytest_cache/
 .test_durations.json
+test_durations.json
 .pytest-cache/
 tmp/
 temp_vision_images/

@@ -66,7 +66,7 @@ _DEFAULT_FILE_TIMEOUT_SECONDS = 600.0  # 10 minutes
 # Duration cache: maps relative file paths to last-observed subprocess
 # wall-clock seconds. Used by ``--slice`` to distribute files across
 # CI jobs by estimated total time, so no one job gets all the slow files.
-_DURATIONS_FILE = ".test_durations.json"
+_DURATIONS_FILE = "test_durations.json"
 
 
 def _count_tests(
