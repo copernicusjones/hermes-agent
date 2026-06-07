@@ -207,6 +207,14 @@ def test_resolve_provider_alias_qwen(monkeypatch):
     assert rp.resolve_provider("qwen-cli") == "qwen-oauth"
 
 
+def test_resolve_provider_alias_nous(monkeypatch):
+    monkeypatch.setattr(rp.auth_mod, "_load_auth_store", lambda: {})
+    monkeypatch.delenv("OPENAI_API_KEY", raising=False)
+    monkeypatch.delenv("OPENROUTER_API_KEY", raising=False)
+    assert rp.resolve_provider("nous-portal") == "nous"
+    assert rp.resolve_provider("nous_portal") == "nous"
+
+
 def test_qwen_oauth_auto_fallthrough_on_auth_failure(monkeypatch):
     """When requested_provider is 'auto' and Qwen creds fail, fall through."""
     from hermes_cli.auth import AuthError

@@ -1481,6 +1481,7 @@ def resolve_provider(
 
     # Normalize provider aliases
     _PROVIDER_ALIASES = {
+        "nous-portal": "nous", "nous_portal": "nous",
         "glm": "zai", "z-ai": "zai", "z.ai": "zai", "zhipu": "zai",
         "google": "gemini", "google-gemini": "gemini", "google-ai-studio": "gemini",
         "x-ai": "xai", "x.ai": "xai", "grok": "xai",
